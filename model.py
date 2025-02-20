@@ -17,7 +17,7 @@ class CNN(nn.Module):
     x = x.view(-1, 64 * 7 * 7)
     x = F.relu(self.fc1(x))
     x = self.fc2(x)
-    return F.softmax(x, dim=1)  # ソフトマックスで確率を出力
+    return x  # Softmaxは外部で適用
 
 def load_model(path="mnist_cnn.pth"):
   model = CNN()
