@@ -79,8 +79,7 @@ class Convolution:
     out_h = int(1 + (H + 2 * self.pad - FH) / self.stride)  # 出力の縦サイズ
     out_w = int(1 + (W + 2 * self.pad - FW) / self.stride)  # 出力の横サイズ
 
-    col, _, _ = im2col(x, FH, FW, self.stride,
-                       self.stride, self.pad, self.pad)
+    col, _, _ = im2col(x, FH, FW, self.stride, self.stride, self.pad, self.pad)
     col_W = self.W.reshape(FN, -1).T  # フィルターの展開
 
     # 畳み込みの計算
