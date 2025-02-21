@@ -17,5 +17,5 @@ predict.py を実行すると、手書き入力用の GUI が表示されます�
 ### 必要なライブラリ
 以下のコマンドを実行し、必要なライブラリをインストールしてください。
 ```ruby:qiita.rb
-"pip install -r requirements.txt"
+pip install -r requirements.txt
 ```
